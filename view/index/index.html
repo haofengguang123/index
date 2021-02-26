@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<table border="1px">
+		<tr>
+			<td>学生id</td>
+			<td>学生姓名</td>
+			<td>学生班级</td>
+			<td>学生头像</td>
+			<td>学生简介</td>
+		</tr>
+		{volist name="studentInfo" id="v"}
+		<tr>
+			<td>{$v.id}</td>
+			<td>{$v.student_name}</td>
+			<td>{$v.student_class}</td>
+			<td><img src="/static/upload/{$v.student_pic}" width="100px" height="100px"></td>
+			<td>{$v.student_dis}</td>
+		</tr>
+		{/volist}
+	</table>
+</body>
+</html>
